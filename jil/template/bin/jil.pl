@@ -7,12 +7,13 @@ use Perl6::Say;
 use MIME::Lite;
 use Archive::Zip;
 use Getopt::Long;
+use Pod::Usage;
 
-my $no_archive = 1;
-my $no_mail    = 1;
+my $no_archive;
+my $no_mail;
 GetOptions (
     'no_archive' => \$no_archive,
-    'no_mail'    => \$no_mail
+    'no_mail'    => \$no_mail,
     'help'       => \my $help,
 );
 pod2usage() if $help;
@@ -20,8 +21,8 @@ pod2usage() if $help;
 my %conf = (
     src_dir       => 'src',
     wgt_file_name => 'wgt/[% module %].wgt',
-    mail_from     => '[% mail_from %]',
-    mail_to       => '[% mail_to %]',
+    mail_from     => '[% config.mail_from %]',
+    mail_to       => '[% config.mail_to %]',
 );
 
 unless ($no_archive) {
@@ -50,7 +51,7 @@ unless ($no_mail) {
     );
     $msg->send;
 
-    say "send mail to... $conf{mail_to}";
+    say "send mail to: $conf{mail_to}";
 }
 
 __END__
