@@ -1,0 +1,4 @@
+---
+class: Module::Setup::Flavor::Default
+plugins:
+  - Template

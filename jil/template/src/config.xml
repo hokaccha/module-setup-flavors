@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:jil="http://www.jil.org/ns/widgets1.2"
+        xmlns:its="http://www.w3.org/2005/11/its"
+        id="[% app_id %]"
+        version="0.1.0"
+        height="100"
+        width="100"
+        viewmodes="floating">
+    <nocursor/>
+    <name short="short name">[% module %]</name>
+    <description>description</description>
+    <icon src="img/icon.png"/>
+    <author>[% config.author %]</author>
+    <content src="index.html" type="text/html"/>
+</widget>

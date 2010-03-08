@@ -1,0 +1,10 @@
+---
+author: your name
+mail_from: 
+mail_to: 
+class: Module::Setup::Flavor::Default
+plugins:
+  - Config::Basic
+  - Template
+  - Additional
+  - +Jil::AppID
