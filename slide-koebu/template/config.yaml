@@ -1,0 +1,18 @@
+author_name: Kazuhito Hokamura
+author_email: k.hokamura@gmail.com
+slides_file: Spork.slides
+template_directory: template/tt2
+template_path: 
+- ./template/tt2
+slides_directory: slides
+download_method: wget
+character_encoding: utf-8
+link_previous: &lt; &lt; Previous
+link_next: Next &gt;&gt;
+link_index: Index
+
+start_command: open slides/start.html
+
+plugin_classes:
+- Spork::S5
+- Spork::S5Theme::Koebu

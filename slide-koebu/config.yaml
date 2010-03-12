@@ -1,0 +1,6 @@
+---
+class: Module::Setup::Flavor::Default
+plugins:
+  - Config::Basic
+  - Template
+  - Additional
