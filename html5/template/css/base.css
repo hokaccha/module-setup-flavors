@@ -12,6 +12,7 @@ Base Style Sheet
 6. form
 7. object
 8. hack
+9. html5
 
 ==================================================*/
 
@@ -151,23 +152,27 @@ object,embed {
  8. hack
 ---------------------------------*/
 
-*html * {
-    zoom: 1;
+* {
+    /zoom: 1;
+    /font-size: 100%;
 }
 
-*html body {
-    font-size: 100%;
-}
-
-*:first-child+html * {
-    zoom: 1;
-}
-
-*:first-child+html body, 
-*:first-child+html br { 
+*:first-child+html body,
+*:first-child+html br {
     letter-spacing: 0; 
 }
 
-*:first-child+html body {
-    font-size: 100%;
+/*
+ 9. html5
+---------------------------------*/
+
+address, article, aside, figure, footer,
+header, hgroup, menu, nav, section {
+    display: block;
 }
+
+[hidden], command, datalist,
+menu[type=context], rp, source {
+    display: none;
+}
+
