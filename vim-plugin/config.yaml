@@ -1,0 +1,10 @@
+---
+author: Kazuhito Hokamura
+class: Module::Setup::Flavor::Default
+email: 'k.hokamura {at} gmail.com'
+url: 'http://webtech-walker.com/'
+plugins:
+  - Config::Basic
+  - Template
+  - Additional
+  - VC::Git
