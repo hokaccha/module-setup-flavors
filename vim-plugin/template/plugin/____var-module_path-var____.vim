@@ -1,6 +1,6 @@
 " [% module %].vim - description
 "
-" Author:  [% config.author %] <[% config.author %]>
+" Author:  [% config.author %] <[% config.url %]>
 " Version: 0.0.1
 " License: MIT License <http://www.opensource.org/licenses/mit-license.php>
 
