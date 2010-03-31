@@ -11,9 +11,8 @@ sub import {
     {
         my $dir = tempdir( CLEANUP => 1 );
 
-        warn models('conf');
         models('conf')->{database} = [
-            "dbi:SQLite:$dir/jobeet-test-database.db", undef, undef,
+            "dbi:SQLite:$dir/test-database.db", undef, undef,
             { unicode => 1, ignore_version => 1 },
         ];
         models('Schema')->deploy;
