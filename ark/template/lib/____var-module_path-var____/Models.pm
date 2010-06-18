@@ -13,14 +13,11 @@ register Schema => sub {
     [% module %]::Schema->connect(@$conf);
 };
 
-__PACKAGE__->initialize;
-for my $table ( __PACKAGE__->get('Schema')->sources ) {
+for my $table (qw/Sample/) {
     register "Schema::$table" => sub {
         my $self = shift;
         $self->get('Schema')->resultset($table);
     };
 }
-
-__PACKAGE__->get('Schema');
 
 1;
